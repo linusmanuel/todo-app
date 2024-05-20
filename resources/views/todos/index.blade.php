@@ -8,7 +8,24 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
-                    Index Page
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Tarefa</th>
+                                <th scope="col">Descrição</th>
+                                <th scope="col">Ação</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cozinhar</td>
+                                <td>Cozinhar arroz</td>
+                                <td>Editar</td>
+                                <td>Em progresso</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
