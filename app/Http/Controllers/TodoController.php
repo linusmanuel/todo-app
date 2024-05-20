@@ -11,14 +11,15 @@ class TodoController extends Controller
         return view('todos.index');
     }
 
-    public function Store(Request $request)
+    public function Create()
     {
         return view('todos.create');
     }
 
-    public function EditTodo()
+    public function Store(Request $request)
     {
-        return view('todos.edit');
+        return $request->all();
     }
+
 
 }
