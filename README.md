@@ -1,66 +1,84 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Construção de uma Aplicação Web com Laravel e Blade
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Descrição do Projeto:
+Você foi designado para desenvolver uma aplicação web do zero até o deploy final utilizando o framework Laravel para o back-end e a engine de templates Blade para o front-end. 
+A aplicação consistirá em um sistema básico de gerenciamento de tarefas (to-do list), onde os usuários poderão criar, visualizar, editar e excluir suas tarefas.
 
-## About Laravel
+## Requisitos Funcionais:
+Autenticação de Usuário: Implementar um sistema de autenticação para permitir que os usuários se registrem, façam login e saiam da aplicação.
+CRUD de Tarefas: Desenvolver as funcionalidades CRUD (Create, Read, Update, Delete) para as tarefas, permitindo que os usuários possam criar novas tarefas, visualizar as existentes, editar e excluir as tarefas.
+Interface de Usuário Intuitiva: Criar uma interface de usuário limpa e intuitiva utilizando o Blade, garantindo uma experiência agradável para o usuário durante a interação com a aplicação.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Requisitos Técnicos:
+Utilizar o framework Laravel para o desenvolvimento do back-end da aplicação.
+Utilizar a engine de templates Blade para a construção do front-end da aplicação.
+Utilizar o Eloquent ORM para interagir com o banco de dados e realizar operações CRUD nas tarefas.
+Utilizar o sistema de autenticação Laravel Breeze para gerenciar a autenticação de usuários.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Testes e Documentação:
+Testes Automatizados: Escrever testes automatizados para as principais funcionalidades da aplicação, utilizando a ferramenta de testes do Laravel (PHP Unit)
+Documentação do Código: Documentar o código fonte de forma clara e concisa, utilizando comentários para explicar a lógica e a estrutura do código.
+Documentação do Usuário: Preparar uma documentação para o usuário final, explicando como utilizar as diferentes funcionalidades da aplicação e fornecendo instruções detalhadas sobre o processo de registro, login, criação e gerenciamento de tarefas.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Entrega do Projeto:
+Código Fonte: O código fonte do projeto deve ser entregue em um repositório Git (GitHub, GitLab, Bitbucket, etc.).
+Documentação: Fornecer documentação completa sobre como configurar, executar e testar a aplicação localmente, incluindo instruções para a execução dos testes automatizados.
+Deploy da Aplicação: Realizar o deploy da aplicação em um ambiente de hospedagem de sua escolha (Heroku, AWS, DigitalOcean, etc.), incluindo a URL do projeto no relatório de entrega.
 
-## Learning Laravel
+## Critérios de Avaliação:
+Implementação correta dos requisitos funcionais.
+Qualidade do código, seguindo as melhores práticas de desenvolvimento com Laravel.
+Cobertura de testes adequada e eficaz.
+Interface de usuário amigável e responsiva.
+Documentação completa e precisa.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Sugestão de etapas:
+1. Planejamento e Análise:
+Defina os requisitos detalhados da aplicação com base no enunciado do projeto.
+Identifique os modelos de dados necessários, como usuário e tarefa.
+Desenhe o esquema do banco de dados e as relações entre os modelos.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+2. Configuração do Ambiente de Desenvolvimento:
+Instale o Laravel e todas as dependências necessárias.
+Configure o banco de dados e as informações de conexão.
+Configure o sistema de autenticação do Laravel.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. Criação dos Models (juntamente com migrations necessárias):
+Crie os modelos para os usuários e tarefas.
+Defina as relações entre os modelos, como um usuário pode ter várias tarefas.
 
-## Laravel Sponsors
+4. Criação dos Controllers:
+Crie controllers para lidar com as operações CRUD de usuários e tarefas.
+Implemente a lógica de negócios para autenticação, criação, leitura, atualização e exclusão de usuários e tarefas.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+5. Criação das Views com Blade:
+Desenvolva as views para as páginas de registro, login, dashboard e páginas de gerenciamento de tarefas.
+Utilize a sintaxe do Blade para incluir dados dinâmicos e criar layouts reutilizáveis.
 
-### Premium Partners
+6. Implementação da Autenticação:
+Adicione rotas protegidas que exijam autenticação para acessar.
+Implemente as funcionalidades de registro, login, logout e redefinição de senha.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+7. Desenvolvimento das Funcionalidades CRUD:
+Implemente as funcionalidades CRUD para usuários e tarefas.
+Crie formulários e endpoints para criar, exibir, atualizar e excluir usuários e tarefas.
 
-## Contributing
+8. Testes Automatizados:
+Escreva testes automatizados para validar o comportamento das principais funcionalidades.
+Teste os controllers, models e a lógica de negócios da aplicação.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+9. Estilização e Aprimoramento da Interface de Usuário:
+Aplique estilos CSS para melhorar a aparência e usabilidade da aplicação.
+Utilize frameworks CSS como Bootstrap ou Tailwind CSS, se desejar.
 
-## Code of Conduct
+10. Documentação:
+Documente o código fonte com comentários claros e explicativos.
+Crie documentação do usuário final, explicando como utilizar a aplicação e suas funcionalidades.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+11. Teste e Debugging:
+Teste a aplicação em diferentes navegadores e dispositivos para garantir a compatibilidade.
+Depure quaisquer erros ou problemas de funcionalidade encontrados durante os testes.
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+12. Deploy da Aplicação:
+Realize o deploy da aplicação em um ambiente de hospedagem de sua escolha.
+Verifique se a aplicação está funcionando corretamente após o deploy.
