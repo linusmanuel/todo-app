@@ -8,6 +8,12 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
+                @if(Session::has('alert-success'))
+                    <div class="alert alert-success" role="alert">
+                        {{ Session::get('alert-success') }}
+                    </div>
+                @endif
+
                     <table class="table">
                         <thead>
                             <tr>

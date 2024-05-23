@@ -24,7 +24,7 @@
                         @csrf
                         <div class="mb-3">
                             <label class="form-label">Nome da tarefa</label>
-                            <input type="text" class="form-control" name="name" placeholder="Informe o nome da tarefa">
+                            <input type="text" class="form-control" name="title" placeholder="Informe o nome da tarefa">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Descrição</label>
