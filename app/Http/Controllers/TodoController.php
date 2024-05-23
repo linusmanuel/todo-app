@@ -10,7 +10,9 @@ class TodoController extends Controller
 {
     public function Index()
     {
-        return view('todos.index');
+        $todos = Todo::all();
+
+        return view('todos.index', compact('todos'));
     }
 
     public function Create()
@@ -22,8 +24,8 @@ class TodoController extends Controller
     {
         $request->validated();
 
-        Todo::created([
-            'title' => $request->name,
+        Todo::create([
+            'title' => $request->title,
             'description' => $request->description
         ]);
 
