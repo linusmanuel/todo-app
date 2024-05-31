@@ -34,5 +34,13 @@ class TodoController extends Controller
         return to_route('todos.index');
     }
 
-
+    public function Show($id) {
+        $todo = Todo::find($id);
+        if (!$todo) {
+            return to_route('todos.index')->withErrors([
+                'error' => 'Não foi possível encontrar a tarefa'
+            ]);
+        }
+        return view('todos.show', compact('todo'));
+    }
 }

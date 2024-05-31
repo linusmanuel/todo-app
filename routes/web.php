@@ -16,3 +16,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('todos/index', [TodoController::class, 'Index'])->name('todos.index');
 Route::get('todos/criar', [TodoController::class, 'Create'])->name('todos.create');
 Route::post('todos/criar', [TodoController::class, 'Store'])->name('todos.store');
+Route::get('todos/ver/{id}', [TodoController::class, 'Show'])->name('todos.show');

@@ -38,18 +38,19 @@
                                 </td>
                                 <td class="group">
                                     <a class="inner btn btn-sm btn-success" href="">Edit</a>
-                                    <a class="inner btn btn-sm btn-info" href="">Ver</a>
+                                    <a class="inner btn btn-sm btn-info" href="{{route('todos.show', $todo->id)}}">Ver</a>
                                     <form action="">
                                         <input type="hidden" name="todo_id" value="{{ $todo->id }}">
-                                        <input type="submit" class="btn btn-sm btn-info">
+                                        <input type="submit" class="btn btn-sm btn-danger" value="Delete">
                                     </form>
                                 </td>
                             </tr>
                             @empty
-                            <td>Nothing to display</td>
                             @endforelse
                         </tbody>
                     </table>
+                    @else
+                        <td>Nothing to display</td>
                     @endif
                 </div>
             </div>

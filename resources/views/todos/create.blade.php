@@ -8,8 +8,6 @@
                 <div class="card-header">Todo App</div>
 
                 <div class="card-body">
-                    <h1>We found any error on submit</h1>
-
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
