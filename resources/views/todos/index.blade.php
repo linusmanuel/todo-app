@@ -14,6 +14,12 @@
                     </div>
                     @endif
 
+                    @if(Session::has('error'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ Session::get('error') }}
+                    </div>
+                    @endif
+
                     @if (count($todos) > 0)
                     <table class="table">
                         <thead>
@@ -50,7 +56,7 @@
                         </tbody>
                     </table>
                     @else
-                        <td>Nothing to display</td>
+                    <td>Nothing to display</td>
                     @endif
                 </div>
             </div>

@@ -37,6 +37,7 @@ class TodoController extends Controller
     public function Show($id) {
         $todo = Todo::find($id);
         if (!$todo) {
+            request()->session()->flash('error', 'Não foi possível encontrar a tarefa');
             return to_route('todos.index')->withErrors([
                 'error' => 'Não foi possível encontrar a tarefa'
             ]);
