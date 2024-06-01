@@ -17,3 +17,6 @@ Route::get('todos/index', [TodoController::class, 'Index'])->name('todos.index')
 Route::get('todos/criar', [TodoController::class, 'Create'])->name('todos.create');
 Route::post('todos/criar', [TodoController::class, 'Store'])->name('todos.store');
 Route::get('todos/ver/{id}', [TodoController::class, 'Show'])->name('todos.show');
+Route::get('todos/{id}/editar', [TodoController::class, 'Edit'])->name('todos.edit');
+Route::put('todos/atualizar', [TodoController::class, 'update'])->name('todos.update');
+

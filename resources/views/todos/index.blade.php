@@ -20,6 +20,12 @@
                     </div>
                     @endif
 
+                    @if(Session::has('alert-info'))
+                    <div class="alert alert-info" role="alert">
+                        {{ Session::get('alert-info') }}
+                    </div>
+                    @endif
+
                     @if (count($todos) > 0)
                     <table class="table">
                         <thead>
@@ -43,7 +49,7 @@
                                     @endif
                                 </td>
                                 <td class="group">
-                                    <a class="inner btn btn-sm btn-success" href="">Edit</a>
+                                    <a class="inner btn btn-sm btn-success" href="{{route('todos.edit', $todo->id)}}">Edit</a>
                                     <a class="inner btn btn-sm btn-info" href="{{route('todos.show', $todo->id)}}">Ver</a>
                                     <form action="">
                                         <input type="hidden" name="todo_id" value="{{ $todo->id }}">
