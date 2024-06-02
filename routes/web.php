@@ -13,11 +13,12 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('todos/index', [TodoController::class, 'Index'])->name('todos.index');
-Route::get('todos/criar', [TodoController::class, 'Create'])->name('todos.create');
-Route::post('todos/criar', [TodoController::class, 'Store'])->name('todos.store');
-Route::get('todos/ver/{id}', [TodoController::class, 'Show'])->name('todos.show');
-Route::get('todos/{id}/editar', [TodoController::class, 'Edit'])->name('todos.edit');
-Route::put('todos/atualizar', [TodoController::class, 'update'])->name('todos.update');
-Route::delete('todos/deletar', [TodoController::class, 'destroy'])->name('todos.destroy');
-
+Route::prefix('todos')->as('todos.')->controller(TodoController::class)->group(function() {
+    Route::get('index', 'Index')->name('index');
+    Route::get('criar', 'Create')->name('create');
+    Route::post('criar', 'Store')->name('store');
+    Route::get('ver/{id}', 'Show')->name('show');
+    Route::get('{id}/editar', 'Edit')->name('edit');
+    Route::put('atualizar', 'update')->name('update');
+    Route::delete('deletar', 'destroy')->name('destroy');
+});
