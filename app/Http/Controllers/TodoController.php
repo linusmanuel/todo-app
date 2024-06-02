@@ -79,5 +79,19 @@ class TodoController extends Controller
         return to_route('todos.index');
     }
 
+    public function Destroy(Request $request)
+    {
+        $todo = Todo::find($request->todo_id);
+        if (!$todo) {
+            request()->session()->flash('error', 'Não foi possível encontrar a tarefa');
+            return to_route('todos.index')->withErrors([
+                'error' => 'Não foi possível encontrar a tarefa'
+            ]);
+        }
 
+        $todo->delete();
+        $request->session()->flash('alert-info', 'Tarefa deletada com sucesso');
+
+        return to_route('todos.index');
+    }
 }
