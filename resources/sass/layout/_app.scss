@@ -1,0 +1,18 @@
+.app {
+    background-color: $primary;
+    border: solid 5px $primary;
+    border-radius: 8px;
+    display: flex;
+    max-width: $container;
+    width: 100%;
+
+    &__aside {
+        background-color: $body-bg;
+        min-height: 600px;
+        flex-basis: 25%;
+    }
+
+    &__body {
+        flex-basis: 75%;
+    }
+}
