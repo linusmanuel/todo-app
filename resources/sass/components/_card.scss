@@ -1,0 +1,17 @@
+.card {
+    background-color: $body-bg;
+    border-radius: 8px;
+    display: flex;
+
+    &__title {
+
+    }
+
+    &__actions {
+
+    }
+
+    &__status {
+        margin-left: auto;
+    }
+}

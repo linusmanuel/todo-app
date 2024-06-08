@@ -1,0 +1,21 @@
+.btn {
+    @include squares(12px);
+    display: inline-block;
+    border: solid 1px $dark;
+    border-radius: 100%;
+
+    &--update {
+        background-color: $neutral;
+        border-color: $neutral;
+    }
+
+    &--show {
+        background-color: $primary-dark;
+        border-color: $primary-dark;
+    }
+
+    &--delete {
+        background-color: $secondary;
+        border-color: $secondary;
+    }
+}
