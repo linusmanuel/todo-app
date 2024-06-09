@@ -1,1 +1,25 @@
 @import './home';
+
+.todo-index {
+    &__header {
+        padding: 0 0 40px 0;
+    }
+
+    &__description,
+    h1 {
+        color: $white;
+        font-size: 20px;
+    }
+
+    &__create {
+        align-items: center;
+        color: $dark;
+
+        i {
+            margin-left: auto;
+            font-size: 20px;
+            color: $primary-dark;
+        }
+    }
+
+}

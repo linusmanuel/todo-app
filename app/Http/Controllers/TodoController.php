@@ -29,7 +29,7 @@ class TodoController extends Controller
             'description' => $request->description
         ]);
 
-        $request->session()->flash('alert-success', 'Todo Created Sucessfully');
+        $request->session()->flash('alert-success', 'Tarefa criada com sucesso');
 
         return to_route('todos.index');
     }

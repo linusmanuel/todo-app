@@ -1,26 +1,25 @@
 <x-app-layout>
-    <div class="container">
+    <div class="container todo-index">
         @if(Session::has('alert-success'))
-        <div class="alert alert-success" role="alert">
-            {{ Session::get('alert-success') }}
-        </div>
+        @include('todos.components.alert-success')
         @endif
 
         @if(Session::has('error'))
-        <div class="alert alert-danger" role="alert">
-            {{ Session::get('error') }}
-        </div>
+        @include('todos.components.alert-danger')
         @endif
 
         @if(Session::has('alert-info'))
-        <div class="alert alert-info" role="alert">
-            {{ Session::get('alert-info') }}
-        </div>
+        @include('todos.components.alert-info')
         @endif
 
-        <h1>Gerencie suas tarefas</h1>
-        <p>Esteja organizado...</p>
-        <a href="{{ route('todos.create') }}" class="card">Criar nova tarefa</a>
+        <div class="todo-index__header">
+            <h1>Gerencie suas tarefas</h1>
+            <p class="todo-index__description">Esteja organizado!</p>
+        </div>
+        <a href="{{ route('todos.create') }}" class="card todo-index__create">
+            Criar nova tarefa
+            <i class="fa-solid fa-heart-circle-plus"></i>
+        </a>
         <div class="cards">
             @if (count($todos) > 0)
             @forelse($todos as $todo)
