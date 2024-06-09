@@ -1,17 +1,40 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 50px 16px;
+}
+
 .card {
     background-color: $body-bg;
-    border-radius: 8px;
+    border-radius: 12px;
     display: flex;
+    column-gap: 16px;
+    padding: 8px 12px;
 
     &__title {
-
+        color: $dark;
     }
 
     &__actions {
-
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
     }
 
     &__status {
         margin-left: auto;
+
+        i {
+            font-size: 20px;
+        }
+
+        .fa-heart-circle-check {
+            color: $primary-light;
+        }
+
+        .fa-heart-circle-exclamation {
+            color: $dark;
+        }
     }
 }
