@@ -48,7 +48,10 @@
             @empty
             @endforelse
             @else
-            <p>Não existem tarefas criadas</p>
+            <p class="todo-index__todo-not-found">
+                Não existem tarefas criadas
+                <i class="fa-solid fa-heart-circle-xmark"></i>
+            </p>
             @endif
         </div>
     </div>
