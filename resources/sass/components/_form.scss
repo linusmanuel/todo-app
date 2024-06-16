@@ -1,0 +1,17 @@
+.form {
+    &__group {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+
+    &__input,
+    &__textarea {
+        background-color: $body-bg;
+        border-radius: 12px;
+        display: flex;
+        column-gap: 16px;
+        padding: 8px 12px;
+        border: transparent;
+    }
+}

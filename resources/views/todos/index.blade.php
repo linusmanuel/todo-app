@@ -41,7 +41,7 @@
                     @if ($todo->is_completed == 1)
                     <i class="fa-solid fa-heart-circle-check"></i>
                     @else
-                    <i class="fa-solid fa-heart-circle-exclamation"></i>
+                    <i class="fa-solid fa-heart-circle-xmark"></i>
                     @endif
                 </div>
             </div>

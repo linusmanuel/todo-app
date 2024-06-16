@@ -1,43 +1,34 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight btn btn-info">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Todo App</div>
-
-                    <div class="card-body">
-                        @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
-
-                        <form method="post" action="{{ route('todos.store') }}">
-                            @csrf
-                            <div class="mb-3">
-                                <label class="form-label">Nome da tarefa</label>
-                                <input type="text" class="form-control" name="title" placeholder="Informe o nome da tarefa">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Descrição</label>
-                                <textarea class="form-control" name="description" cols="5" rows="5"></textarea>
-                            </div>
-                            <div class="col-auto">
-                                <button type="submit" class="btn btn-primary mb-3">Criar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+        <a href="{{ route('todos.index')}}">
+            <i class="fa-solid fa-tent-arrow-turn-left pb-4" style="color: #ffffff;"></i>
+        </a>
+        <div class="">
+            @if ($errors->any())
+            <div class="alert alert-danger" data-message>
+                <ul class="text-red-300 font-weight-bold pb-4">
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
             </div>
+            @endif
+
+            <form method="post" action="{{ route('todos.store') }}" class="form">
+                @csrf
+                <div class="form__group">
+                    <input type="text" class="form__input" name="title" placeholder="Informe o nome da tarefa">
+                </div>
+                <div class="form__group">
+                    <textarea class="form__textarea" name="description" cols="5" rows="5" placeholder="Escreva a descrição"></textarea>
+                </div>
+                <div class="">
+                    <button type="submit" class="btn--primary-o">
+                        <i class="fa-solid fa-heart-circle-plus"></i>
+                        Criar
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </x-app-layout>

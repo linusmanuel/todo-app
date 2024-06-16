@@ -1,4 +1,4 @@
-<div role="alert" class="pb-4">
+<div role="alert" class="pb-4" data-message>
     <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
         Informação!
     </div>

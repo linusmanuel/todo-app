@@ -26,14 +26,43 @@
 
         <!-- Page Heading -->
         <aside class="app__aside">
-            <div>
+            <div class="aside__profile">
                 Perfil
                 descrição
+            </div>
+            <div class="aside__todo-tags">
+                <h3>
+                    <i class="fa-solid fa-heart-circle-exclamation"></i>
+                    Todos tags
+                </h3>
+                <ul>
+                    <li>
+                        <span class="btn btn--delete"></span>
+                        <span>Deletar</span>
+                    </li>
+                    <li>
+                        <span class="btn btn--show"></span>
+                        <span>Visualizar</span>
+                    </li>
+                    <li>
+                        <span class="btn btn--update"></span>
+                        <span>Atualizar</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-heart-circle-check"></i>
+                        <span>Completo</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-heart-circle-xmark"></i>
+                        <span>Imcompleto</span>
+                    </li>
+                </ul>
+
             </div>
         </aside>
 
         <!-- Page Content -->
-        <main class="app__body">
+        <main class="app__body" data-app-body>
             {{ $slot }}
         </main>
     </div>
