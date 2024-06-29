@@ -1,26 +1,30 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight btn btn-info">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Todo App</div>
-                    <div class="card-body">
-                        @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                        @endif
-                        <a href="{{ url()->previous() }}" class="btn btn-sm btn-info">Voltar</a>
-                        <h4>Ver tarefa</h4>
-                        Nome da tarefa: {{ $todo->title }}
-                        Descrição da tarefa: {{ $todo->description }}
-                    </div>
-                </div>
+    <div class="container todo-show">
+        @if(Session::has('alert-success'))
+        @include('todos.components.alert-success')
+        @endif
+
+        @if(Session::has('error'))
+        @include('todos.components.alert-danger')
+        @endif
+
+        @if(Session::has('alert-info'))
+        @include('todos.components.alert-info')
+        @endif
+
+        <a href="{{ route('todos.index')}}">
+            <i class="fa-solid fa-tent-arrow-turn-left pb-4" style="color: #ffffff;"></i>
+        </a>
+        <div class="cards">
+            <div class="card">
+                <h2 class="card__title">
+                    Nome da tarefa: {{ $todo->title }}
+                </h2>
+            </div>
+            <div class="card__inner">
+                <p class="card">
+                    {{ $todo->description }}
+                </p>
             </div>
         </div>
     </div>
