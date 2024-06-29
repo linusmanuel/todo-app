@@ -1,10 +1,41 @@
 @mixin squares($size) {
-    height: $size;
-    width: $size;
+  height: $size;
+  width: $size;
 }
 
 @mixin centralized {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BREAKPOINTS */
+@mixin mobile-up {
+  @media screen and (min-width: $sm) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media screen and (min-width: $md) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media screen and (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin desktop-md-up {
+  @media screen and (min-width: $xl) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media screen and (min-width: $xxl) {
+    @content;
+  }
 }
