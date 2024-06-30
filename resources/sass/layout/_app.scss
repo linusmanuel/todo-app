@@ -1,53 +1,109 @@
 .app {
-    border: solid 5px darken($primary, 5%);
-    border-radius: 8px;
-    display: flex;
-    max-width: $container;
-    width: 100%;
+  border: solid 5px darken($primary, 5%);
+  border-radius: 8px;
+  display: flex;
+  max-width: $container;
+  width: 100%;
 
-    &__aside {
-        background-color: $body-bg;
-        min-height: 600px;
-        flex-basis: 25%;
-        padding: 16px;
-        border-top-left-radius: 12px;
-        border-bottom-left-radius: 12px;
+  &__aside {
+    background-color: $body-bg;
+    min-height: 600px;
+    flex-basis: 25%;
+    padding: 16px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
 
-        h3 {
-            margin-bottom: 10px;
-        }
-
-        h3 i {
-            margin-right: 20px;
-        }
-
-
+    h3 {
+      margin-bottom: 10px;
     }
 
-    &__body {
-        flex-basis: 75%;
-        padding: 50px 70px;
-        background-color: $primary;
+    h3 i {
+      margin-right: 20px;
+    }
+  }
+
+  &__body {
+    flex-basis: 75%;
+    padding: 50px 70px;
+    background-color: $primary;
+  }
+
+  .aside__profile {
+    padding-bottom: 20px;
+  }
+
+  .aside__todo-tags {
+    color: $dark;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    li {
+      padding-left: 40px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+  }
+}
+
+@include tablet-down {
+  .app {
+    flex-direction: column;
+    height: 100vh;
+
+    &__aside {
+      min-height: auto;
+      height: auto;
     }
 
     .aside__profile {
-        padding-bottom: 20px;
+      width: 26%;
     }
 
     .aside__todo-tags {
-        color: $dark;
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        li {
-            padding-left: 40px;
-            display: flex;
-            gap: 16px;
-            align-items: center;
-        }
+      ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        overflow: scroll;
+      }
     }
+  }
+
+}
+@include mobile {
+  .app {
+    &__body {
+      padding: 50px 25px;
+      background-color: $primary;
+    }
+
+    .aside__profile {
+      width: 50%;
+    }
+  }
+}
+
+@include mobile-down {
+  .app {
+    &__body {
+      padding: 50px 5px;
+      background-color: $primary;
+    }
+
+    .aside__profile {
+      width: 57%;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .app {
+    .aside__profile {
+      width: 69%;
+    }
+  }
 }

@@ -10,32 +10,39 @@
 }
 
 /* BREAKPOINTS */
-@mixin mobile-up {
-  @media screen and (min-width: $sm) {
-    @content;
-  }
-}
-
-@mixin tablet-up {
-  @media screen and (min-width: $md) {
-    @content;
-  }
-}
-
-@mixin desktop-up {
-  @media screen and (min-width: $lg) {
-    @content;
-  }
-}
-
-@mixin desktop-md-up {
-  @media screen and (min-width: $xl) {
-    @content;
-  }
-}
 
 @mixin desktop-large {
-  @media screen and (min-width: $xxl) {
+  @media screen and (max-width: $xxl) {
+    @content;
+  }
+}
+
+@mixin desktop-md-down {
+  @media screen and (max-width: $xl) {
+    @content;
+  }
+}
+
+@mixin desktop-down {
+  @media screen and (max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media screen and (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin mobile {
+    @media screen and (max-width: $sm) {
+        @content;
+    }
+}
+
+@mixin mobile-down {
+  @media screen and (max-width: $xs) {
     @content;
   }
 }
