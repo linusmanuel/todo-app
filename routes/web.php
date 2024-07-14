@@ -17,11 +17,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::prefix('todos')->as('todos.')->controller(TodoController::class)->group(function () {
-        Route::get('index', 'Index')->name('index');
-        Route::get('criar', 'Create')->name('create');
-        Route::post('criar', 'Store')->name('store');
-        Route::get('ver/{id}', 'Show')->name('show');
-        Route::get('{id}/editar', 'Edit')->name('edit');
+        Route::get('index', 'index')->name('index');
+        Route::get('criar', 'create')->name('create');
+        Route::post('criar', 'store')->name('store');
+        Route::get('ver/{id}', 'show')->name('show');
+        Route::get('{id}/editar', 'edit')->name('edit');
         Route::put('atualizar', 'update')->name('update');
         Route::delete('deletar', 'destroy')->name('destroy');
     });

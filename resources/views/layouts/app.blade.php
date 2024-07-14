@@ -18,8 +18,6 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<?php // @include('layouts.navigation')
-?>
 
 <body class="md:min-h-screen md:flex md:justify-center md:items-center">
     <div class="app">

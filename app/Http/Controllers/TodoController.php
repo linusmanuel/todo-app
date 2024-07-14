@@ -16,7 +16,7 @@ class TodoController extends Controller
      *
      * @return \Illuminate\View\View The view displaying the list of all Todo items.
      */
-    public function Index()
+    public function index()
     {
         $todos = Todo::all();
 
@@ -31,7 +31,7 @@ class TodoController extends Controller
      *
      * @return \Illuminate\View\View The view containing the form to create a new Todo item.
      */
-    public function Create()
+    public function create()
     {
         return view('todos.create');
     }
@@ -46,7 +46,7 @@ class TodoController extends Controller
      * @param \App\Http\Requests\TodoRequest $request The incoming request containing the data for the new todo item.
      * @return \Illuminate\Http\RedirectResponse Redirects to the index page of todo items.
      */
-    public function Store(TodoRequest $request)
+    public function store(TodoRequest $request)
     {
         $request->validated();
 
@@ -70,7 +70,7 @@ class TodoController extends Controller
      * @param int $id The ID of the todo item to display.
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\View\View Redirects to the index page with an error message if the item is not found, or returns the view to display the item.
      */
-    public function Show($id)
+    public function show($id)
     {
         $todo = Todo::find($id);
         if (!$todo) {
@@ -93,7 +93,7 @@ class TodoController extends Controller
      * @param int $id The ID of the todo item to edit.
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\View\View Redirects to the index page with an error message if the item is not found, or returns the view to edit the item.
      */
-    public function Edit($id)
+    public function edit($id)
     {
         $todo = Todo::find($id);
         if (!$todo) {
@@ -146,7 +146,7 @@ class TodoController extends Controller
      * @param \Illuminate\Http\Request $request The incoming request containing the data for updating the todo item.
      * @return \Illuminate\Http\RedirectResponse Redirects to the index page with a success message if the update is successful, or with an error message if the item is not found.
      */
-    public function Destroy(Request $request)
+    public function destroy(Request $request)
     {
         $todo = Todo::find($request->todo_id);
         if (!$todo) {
