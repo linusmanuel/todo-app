@@ -18,14 +18,9 @@
     @include('home.menu')
     <main class="">
         @include('home.hero')
-        <section class="home__about">
-            About
-        </section>
+        @include('home.about')
     </main>
-
-    <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-        &copy; 2024 - Todos direitos reservados,Desenvolvido com ❤️💙 por João Lino | Enployer at An Tecnology as FullStack Developer
-    </footer>
+    @include('home.footer')
 </body>
 
 </html>
