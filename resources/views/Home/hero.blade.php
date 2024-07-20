@@ -12,13 +12,12 @@
                 Inventore, quos!
             </p>
             <div class="login-with">
-                <button class="btn">Entrar com google</button>
-                <button class="btn">Entrar com facebook</button>
+                <button class="btn-default">Entrar com google</button>
+                <button class="btn-default">Entrar com facebook</button>
             </div>
         </div>
         <div class="ilustraction">
-            <img src="" alt="Capa do aplicativo">
+            @include('todos.components.ilustration-home')
         </div>
-
     </div>
 </section>

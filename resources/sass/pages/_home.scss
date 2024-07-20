@@ -18,4 +18,43 @@
             column-gap: 16px;
         }
     }
+
+    &__hero {
+        padding-block: 100px;
+        .container {
+            margin-inline: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+
+        .content {
+            flex-basis: 32%;
+
+            .title {
+                font-weight: bold;
+                font-size: 38px;
+                line-height: 1;
+                margin-bottom: 16px;
+            }
+
+            .description {
+                margin-bottom: 16px;
+                color: $dark;
+            }
+        }
+
+        .ilustraction {
+            display: flex;
+            justify-content: end;
+            flex-basis: 50%;
+
+            svg {
+                width: 700px;
+            }
+        }
+
+    }
 }
+
+
