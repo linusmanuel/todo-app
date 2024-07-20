@@ -1,84 +1,92 @@
-# Construção de uma Aplicação Web com Laravel e Blade
+# TODO APP
+Este projeto envolve o desenvolvimento de uma aplicação web completa, desde o início até o deploy final, utilizando o framework Laravel para o back-end e a engine de templates Blade para o front-end. A aplicação será um sistema básico de gerenciamento de tarefas (to-do list), permitindo que os usuários criem, visualizem, editem e excluam suas tarefas.
 
-## Descrição do Projeto:
-Você foi designado para desenvolver uma aplicação web do zero até o deploy final utilizando o framework Laravel para o back-end e a engine de templates Blade para o front-end. 
-A aplicação consistirá em um sistema básico de gerenciamento de tarefas (to-do list), onde os usuários poderão criar, visualizar, editar e excluir suas tarefas.
+![todo app](image.png)
 
-## Requisitos Funcionais:
-Autenticação de Usuário: Implementar um sistema de autenticação para permitir que os usuários se registrem, façam login e saiam da aplicação.
-CRUD de Tarefas: Desenvolver as funcionalidades CRUD (Create, Read, Update, Delete) para as tarefas, permitindo que os usuários possam criar novas tarefas, visualizar as existentes, editar e excluir as tarefas.
-Interface de Usuário Intuitiva: Criar uma interface de usuário limpa e intuitiva utilizando o Blade, garantindo uma experiência agradável para o usuário durante a interação com a aplicação.
+## 🛠️ Tecnologias Utilizadas
 
-## Requisitos Técnicos:
-Utilizar o framework Laravel para o desenvolvimento do back-end da aplicação.
-Utilizar a engine de templates Blade para a construção do front-end da aplicação.
-Utilizar o Eloquent ORM para interagir com o banco de dados e realizar operações CRUD nas tarefas.
-Utilizar o sistema de autenticação Laravel Breeze para gerenciar a autenticação de usuários.
+### Linguagem de Programação
+- [PHP] - PHP: Utilizado para a lógica de backend.
 
-## Testes e Documentação:
-Testes Automatizados: Escrever testes automatizados para as principais funcionalidades da aplicação, utilizando a ferramenta de testes do Laravel (PHP Unit)
-Documentação do Código: Documentar o código fonte de forma clara e concisa, utilizando comentários para explicar a lógica e a estrutura do código.
-Documentação do Usuário: Preparar uma documentação para o usuário final, explicando como utilizar as diferentes funcionalidades da aplicação e fornecendo instruções detalhadas sobre o processo de registro, login, criação e gerenciamento de tarefas.
+### 🛠️ Frameworks e Bibliotecas
+- [Laravel] - Principal framework PHP utilizado para estruturar o projeto;
+- [PHPunit] - Ferramenta para teste unitário;
+- [Composer] - Gerenciador de dependências para PHP;
+- [Breeze] - Utilizado para autenticação no sistema de login;
+- [Bootstrap] - Biblioteca para estilização do layout;
+- [NPM] - Gerenciador de pacotes do nodeJs/Javascript.
 
-## Entrega do Projeto:
-Código Fonte: O código fonte do projeto deve ser entregue em um repositório Git (GitHub, GitLab, Bitbucket, etc.).
-Documentação: Fornecer documentação completa sobre como configurar, executar e testar a aplicação localmente, incluindo instruções para a execução dos testes automatizados.
-Deploy da Aplicação: Realizar o deploy da aplicação em um ambiente de hospedagem de sua escolha (Heroku, AWS, DigitalOcean, etc.), incluindo a URL do projeto no relatório de entrega.
+### Banco de Dados
+- [MySQL] - Utilizado para armazenamento dos dados. Arquivos de migração estão localizados em database/migrations.
 
-## Critérios de Avaliação:
-Implementação correta dos requisitos funcionais.
-Qualidade do código, seguindo as melhores práticas de desenvolvimento com Laravel.
-Cobertura de testes adequada e eficaz.
-Interface de usuário amigável e responsiva.
-Documentação completa e precisa.
+## 🛠️ Ferramentas de Desenvolvimento
+- [Artisan] - Ferramenta de linha de comando fornecida pelo Laravel para várias tarefas de desenvolvimento;
+- [Factory] - Utilizado para gerar dados de teste, localizado em database/factories;
+- [Vite] - Utilizado para buildar o projeto.
 
-## Sugestão de etapas:
-1. Planejamento e Análise:
-Defina os requisitos detalhados da aplicação com base no enunciado do projeto.
-Identifique os modelos de dados necessários, como usuário e tarefa.
-Desenhe o esquema do banco de dados e as relações entre os modelos.
+## 🚀 Como Executar o Projeto
 
-2. Configuração do Ambiente de Desenvolvimento:
-Instale o Laravel e todas as dependências necessárias.
-Configure o banco de dados e as informações de conexão.
-Configure o sistema de autenticação do Laravel.
+### Passos para Execução
 
-3. Criação dos Models (juntamente com migrations necessárias):
-Crie os modelos para os usuários e tarefas.
-Defina as relações entre os modelos, como um usuário pode ter várias tarefas.
+1. **Clone o repositório**
 
-4. Criação dos Controllers:
-Crie controllers para lidar com as operações CRUD de usuários e tarefas.
-Implemente a lógica de negócios para autenticação, criação, leitura, atualização e exclusão de usuários e tarefas.
+   ```sh
+   git clone https://github.com/linusmanuel/todo-app.git
+   cd Todo-App
 
-5. Criação das Views com Blade:
-Desenvolva as views para as páginas de registro, login, dashboard e páginas de gerenciamento de tarefas.
-Utilize a sintaxe do Blade para incluir dados dinâmicos e criar layouts reutilizáveis.
+2. **Configurar as variáveis de ambiente**
 
-6. Implementação da Autenticação:
-Adicione rotas protegidas que exijam autenticação para acessar.
-Implemente as funcionalidades de registro, login, logout e redefinição de senha.
+   ```sh
+   cp .env.example .env
+   ```
 
-7. Desenvolvimento das Funcionalidades CRUD:
-Implemente as funcionalidades CRUD para usuários e tarefas.
-Crie formulários e endpoints para criar, exibir, atualizar e excluir usuários e tarefas.
+3. **Instalar as depências do Composer**
 
-8. Testes Automatizados:
-Escreva testes automatizados para validar o comportamento das principais funcionalidades.
-Teste os controllers, models e a lógica de negócios da aplicação.
+   ```sh
+   composer install
+   ```
+   ```sh
+   npm install
 
-9. Estilização e Aprimoramento da Interface de Usuário:
-Aplique estilos CSS para melhorar a aparência e usabilidade da aplicação.
-Utilize frameworks CSS como Bootstrap ou Tailwind CSS, se desejar.
+4. **Gerar a chave da aplicação**
 
-10. Documentação:
-Documente o código fonte com comentários claros e explicativos.
-Crie documentação do usuário final, explicando como utilizar a aplicação e suas funcionalidades.
+   ```sh
+   php artisan key:generate
 
-11. Teste e Debugging:
-Teste a aplicação em diferentes navegadores e dispositivos para garantir a compatibilidade.
-Depure quaisquer erros ou problemas de funcionalidade encontrados durante os testes.
+5. **Configurar o banco de dados**
+- No arquivo .env, configure as variáveis de ambiente DB_DATABASE, DB_USERNAME e DB_PASSWORD conforme o seu ambiente de desenvolvimento.
 
-12. Deploy da Aplicação:
-Realize o deploy da aplicação em um ambiente de hospedagem de sua escolha.
-Verifique se a aplicação está funcionando corretamente após o deploy.
+6. **Executar as migrações e seeders**
+
+   ```sh
+   php artisan migrate --seed
+
+7. **Iniciar o servidor de desenvolvimento**
+
+   ```sh
+   php artisan serve
+   ```
+
+   ```sh
+   npm run dev
+
+7. **Acessar a aplicação**
+- Abra o navegador e acesse http://servidor:configurado.
+
+## Arquitetura do Projeto
+
+### MVC(Model-View-Controller): Estrutura utilizada para organizar o código.
+
+- [Models] - Representações dos dados, localizadas em app/Models.
+- [Views] - Recursos e respostas de dados, localizadas em app/Http/Resources.
+- [Controllers] - Lógica de controle das requisições, localizados em app/Http/Controllers.
+- [Middleware] - Camadas intermediárias para tratar requisições HTTP, localizadas em app/Http/Middleware.
+
+## ✒️ Autor
+
+- **Joao Lino** - _Desenvolvedor_ - <a href="https://github.com/linusmanuel" target="_blank">Joao Lino Manuel</a>
+
+## 🎁 Expressões de gratidão
+
+- Quanto mais difícil maior a satisfação 🙌
+- Obrigado! 😉
