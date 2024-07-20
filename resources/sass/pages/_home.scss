@@ -1,5 +1,21 @@
 .home {
     &__header {
-        background-color: blue;
+        .container {
+            background-color: $body-bg;
+            margin-inline: auto;
+            display: flex;
+            align-items: center;
+            min-height: 70px;
+            padding: 16px 10px ;
+        }
+
+        .logo {
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            column-gap: 16px;
+        }
     }
 }

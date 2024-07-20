@@ -28,4 +28,18 @@
         font-size: 18px;
         color: $primary-dark;
     }
+
+    &-default {
+        background-color: $primary;
+        color: $body-bg;
+        padding: 4px 8px;
+        border-radius: 4px;
+        transition: all .2 ease-in;
+    }
+
+    &-default:hover {
+        background-color: $primary-light;
+        transition: all .2s ease-in;
+    }
 }
+
