@@ -1,7 +1,9 @@
 .home {
     &__header {
+        position: fixed;
+        width: 100%;
+        background-color: $primary-light;
         .container {
-            background-color: $body-bg;
             margin-inline: auto;
             display: flex;
             align-items: center;
@@ -11,6 +13,7 @@
 
         .logo {
             font-weight: bold;
+            color: $body-bg;
         }
 
         nav {
@@ -54,6 +57,62 @@
             }
         }
 
+    }
+
+    &__about {
+        .container {
+            margin-inline: auto;
+
+            header {
+                width: 400px;
+                text-align: center;
+                margin-inline: auto;
+            }
+
+            h3 {
+                font-weight: bold;
+                font-size: 24px;
+            }
+
+            .description {
+                color: $dark;
+                margin-bottom: 32px;
+            }
+
+            .ilustration-wrapper iframe {
+                margin-inline: auto;
+                margin-bottom: 32px;
+            }
+        }
+    }
+
+    &__footer {
+        color: $body-bg;
+        background-color: $primary-light;
+        .container {
+            margin-inline: auto;
+            padding-bottom: 20px;
+        }
+
+        nav {
+            width: 80%;
+            margin-inline: auto;
+        }
+
+        ul {
+            display: flex;
+            padding-block: 50px;
+            justify-content: space-between;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+        }
+
+        p {
+            text-align: center;
+        }
     }
 }
 
