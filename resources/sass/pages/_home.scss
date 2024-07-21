@@ -114,6 +114,46 @@
             text-align: center;
         }
     }
+
+    @include tablet-down {
+        &__header {
+            .btn-last {
+                margin-right: 20px;
+            }
+        }
+
+        &__hero {
+            padding-block: 100px;
+
+            .container {
+                flex-direction: column;
+                padding-inline: 15px;
+            }
+
+            .ilustraction {
+                display: none;
+            }
+
+            .content {
+                .title {
+                    font-size: 32px;
+                }
+            }
+
+        }
+
+        &__about {
+        .container {
+            padding-inline: 15px;
+            .ilustration-wrapper iframe {
+                margin-inline: auto;
+                margin-bottom: 32px;
+                width: 100%;
+                height: 540px;
+            }
+        }
+    }
+    }
 }
 
 

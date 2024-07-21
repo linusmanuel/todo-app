@@ -13,7 +13,7 @@
             </a>
 
             @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="btn-default">
+            <a href="{{ route('register') }}" class="btn-default btn-last">
                 Registar
             </a>
             @endif
