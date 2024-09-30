@@ -72,6 +72,8 @@ Este projeto envolve o desenvolvimento de uma aplicação web completa, desde o 
 
 7. **Acessar a aplicação**
 - Abra o navegador e acesse http://servidor:configurado.
+- Usuário: visitante@test.com
+- Senha: 123456
 
 ## Arquitetura do Projeto
 
