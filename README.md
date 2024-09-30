@@ -74,6 +74,7 @@ Este projeto envolve o desenvolvimento de uma aplicação web completa, desde o 
 - Abra o navegador e acesse http://servidor:configurado.
 - Usuário: visitante@test.com
 - Senha: 123456
+- Ver um video:  <a href="[https://github.com/linusmanuel](https://youtu.be/BzCIQ9neuos)" target="_blank">Clique aqui...</a>
 
 8. **Testes automatizados**
 ```sh
