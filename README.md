@@ -75,6 +75,11 @@ Este projeto envolve o desenvolvimento de uma aplicação web completa, desde o 
 - Usuário: visitante@test.com
 - Senha: 123456
 
+8. **Testes automatizados**
+```sh
+   php artisan test
+```
+
 ## Arquitetura do Projeto
 
 ### MVC(Model-View-Controller): Estrutura utilizada para organizar o código.
